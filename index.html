@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notepad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div id="note-list"></div>
+        <div id="editor" class="hidden">
+            <input type="text" id="note-title" placeholder="Title">
+            <textarea id="note-body" placeholder="Write your note here..."></textarea>
+            <button id="save-btn">Save</button>
+            <button id="delete-btn">Move to Bin</button>
+        </div>
+    </main>
+    <nav>
+        <button id="new-note-btn">+ New Note</button>
+        <button id="bin-btn">🗑️ Recycle Bin</button>
+    </nav>
+    <script src="app.js"></script>
+</body>
+</html>
