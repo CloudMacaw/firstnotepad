@@ -19,7 +19,7 @@ function renderNotes() {
     const list = document.getElementById('note-list');
     list.innerHTML = '';
     const source = viewingBin ? bin : notes;
-    
+
     source.forEach(note => {
         const div = document.createElement('div');
         div.className = 'note-card';
@@ -93,5 +93,6 @@ document.getElementById('bin-btn').onclick = () => {
 
 // Initial render
 renderNotes();
-navigator.serviceWorker.register('/
-    sw.js');
+
+// Register service worker for offline/install support (relative path for GitHub Pages)
+navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration skipped:', err));
